@@ -1,0 +1,22 @@
+{
+    "files.autoSaveDelay": 50,
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "window.zoomLevel": 1,
+
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Noctis Obscuro",
+
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--disable=C0111",
+        "--disable=C0301",
+        "--enable=W0614",
+    ],
+    "explorer.confirmDelete": false,
+}
