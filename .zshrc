@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sopinski/.oh-my-zsh"
+export ZSH="/home/mateusz/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,30 +100,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-function nproxy {
-	export http_proxy=http://10.158.100.2:8080
-	export https_proxy=http://10.158.100.2:8080
-}
-
-function unnproxy {
-	unset http_proxy
-	unset https_proxy
-}
-
-nproxy
-
-export PATH="/home/sopinski/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-alias lsvn='echo -n "svn checkout --username sopinski https://svne1.access.nsn.com/isource/svnroot/cloud_agents/" | xclip -selection c'
-
-alias pipconf-agent='cp ~/.pip/pipconf-agent ~/.pip/pip.conf'
-alias pipconf-lizard='cp ~/.pip/pipconf-lizard ~/.pip/pip.conf'
-alias pipconf-empty='rm ~/.pip/pip.conf'
-
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
-
+eval "$(pyenv virtualenv-init -)"
