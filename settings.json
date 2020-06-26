@@ -4,10 +4,10 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
 
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
 
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Noctis Obscuro",
+    "workbench.colorTheme": "Night Owl (No Italics)",
 
     "python.testing.autoTestDiscoverOnSaveEnabled": false,
     "python.linting.pylintEnabled": true,
@@ -19,4 +19,5 @@
         "--enable=W0614",
     ],
     "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
 }
